@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>浙江大学通行码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./files/main.css">
+
+<script>setTimeout("location=location; ", (24*3600*1000)*3); </script><script>
+
+
+
+
+
+    Date.prototype.format = function (fmt) {
+        var o = {
+            "y+": this.getFullYear, //年
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds() //秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    }
+    setInterval("document.getElementById('nowdateTime').innerHTML = (new Date()).format('MM月dd日 hh:mm:ss');", 1000);
+    setInterval("document.getElementById('nowday').innerHTML = (new Date()).format('yyyy-MM-dd yyyy-MM-dd');", 1000);
+
+</script></head>
+
+
+
+
+
+
+
+
+<body class="blue-bg" style="background-image:url(files/blue-bg.png)" >
+<div class="banner"><img src="./files/text.png"></div>
+
+
+
+
+<div class="content-box">
+    <div class="top-title">
+        <h3>叶天壮的通行码</h3>
+
+
+            <span class="bgr-blue">研究生</span>
+
+
+
+
+
+    </div>
+
+            <b><div id="nowdateTime" style="text-align:center;font-size:21px">aaaa</div></b>
+    <div>
+
+            <div id="pic" align="center"><img src="./files/bluecode.jpg" width="180" height="180"></img></div>
+
+
+
+
+
+
+    </div>
+
+
+            <div><div class="time">有效期：2020-07-11 - 2020-07-11</div></div>
+
+
+
+
+
+    <div id="hzjkm"><div class="hz" style="color: #55b957">健康码为 绿码</div></div>
+
+
+    <div id="dateTime"><div class="time">同步时间：2020-07-11 09:57:44</div></div>
+
+        <p class="tip" style="margin-top: 10px;">凭蓝码可在浙江大学校园内通行<br>请主动出示，配合检查</p>
+
+
+    <div style="text-align:center; margin-top: 10px">
+        <a target="_blank" href="http://one.zju.edu.cn/taskcenter/wechat/index">办事大厅</a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="http://one.zju.edu.cn/pass_code/zx/getList">申请记录</a>&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+    </div>
+</div>
+<div class="bottom-tip">
+    <h3>安 保 处 ：0571-88206110</h3>
+    <a href="http://xwfw.zju.edu.cn/mobile/redir.php?catalog_id=371039" target="_blank" class="link-btn">常见问题</a>
+    <h3>技术支持：0571-87951669</h3>
+</div>
+
+
+<button id="paste-helper-id" style="width: 0px; height: 0px; padding: 0px; margin: 0px; border: 0px; display: none;"></button></body></html>
